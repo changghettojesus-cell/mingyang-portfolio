@@ -5,8 +5,8 @@
   const labelled = document.querySelectorAll('[data-label-zh]');
   const languageKey = 'mingyang-portfolio-language';
   const pageMeta = {
-    en: ['Mingyang Chang · Product, AI & Commercialization', 'Mingyang Chang’s portfolio on product development, applied AI, and commercialization.'],
-    'zh-CN': ['常明阳 · 产品、AI 与商业化', '常明阳的个人作品集，关于产品开发、AI 应用与商业化。']
+    en: ['Mingyang Chang · AI Product Development & Commercialization', 'Mingyang Chang’s portfolio on AI product development and commercialization.'],
+    'zh-CN': ['常明阳 · AI 产品开发与商业化', '常明阳的个人作品集，聚焦 AI 产品开发与商业化。']
   };
 
   function selectLanguage(language, remember) {
