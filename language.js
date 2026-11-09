@@ -23,17 +23,6 @@
     }
   }
 
-  // Scale the fixed-pixel perspective correction with the image frame.
-  const screenFrame = document.querySelector('.tech-hill-figure .media-frame');
-  if (screenFrame && typeof ResizeObserver !== 'undefined') {
-    const updateScreenScale = () => {
-      screenFrame.style.setProperty('--screen-scale', screenFrame.clientWidth / 1696);
-      screenFrame.setAttribute('data-rectified', '');
-    };
-    updateScreenScale();
-    new ResizeObserver(updateScreenScale).observe(screenFrame);
-  }
-
   let saved;
   try { saved = localStorage.getItem(languageKey); } catch { /* Default to English. */ }
   selectLanguage(saved, false);
