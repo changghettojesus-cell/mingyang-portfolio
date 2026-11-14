@@ -3,141 +3,92 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Mingyang Chang’s portfolio on AI product development and commercialization.">
-  <meta name="theme-color" content="#f5f1e7">
-  <title>Mingyang Chang · AI Product Development &amp; Commercialization</title>
-  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css?v=layout-2">
-  <script src="language.js?v=layout-2" defer></script>
+  <meta name="theme-color" content="#100f0e">
+  <title>Mingyang Chang · About</title>
+  <link rel="icon" href="./assets/favicon.svg">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="./map-land.js"></script>
+  <script defer src="hk-districts.js"></script>
+  <script defer src="hk-coast.js"></script>
+  <script defer src="sz-districts.js"></script>
+  <script defer src="./entries.js"></script>
+  <script defer src="about.js"></script>
+  <script defer src="background.js"></script>
 </head>
 <body>
-  <a href="#main" class="skip-link"><span class="en" lang="en">Skip to content</span><span class="zh" lang="zh-CN">跳到正文</span></a>
-  <header class="site-header">
-    <div class="shell header-inner">
-      <a class="wordmark" href="#home" aria-label="Mingyang Chang"><span class="monogram" aria-hidden="true">MC</span><span class="wordmark-name"><span class="en" lang="en">Mingyang Chang</span><span class="zh" lang="zh-CN">常明阳</span></span></a>
-      <nav class="nav" aria-label="Primary navigation" data-label-en="Primary navigation" data-label-zh="主导航">
-        <a href="#education"><span class="en" lang="en">Education</span><span class="zh" lang="zh-CN">教育</span></a>
-        <a href="#work"><span class="en" lang="en">Work</span><span class="zh" lang="zh-CN">经历</span></a>
-        <a href="#life"><span class="en" lang="en">Life</span><span class="zh" lang="zh-CN">生活</span></a>
-      </nav>
-      <div class="language" role="group" aria-label="Language" data-label-en="Language" data-label-zh="语言">
-        <button type="button" data-set-lang="en" lang="en" aria-pressed="true" aria-label="English">EN</button>
-        <button type="button" data-set-lang="zh-CN" lang="zh-CN" aria-pressed="false" aria-label="简体中文">中文</button>
-      </div>
-    </div>
+  <canvas class="background-dots" aria-hidden="true"></canvas>
+  <a class="skip" href="#main" data-text="skip">Skip to content</a>
+  <header class="topbar">
+    <div class="progress" aria-hidden="true"><i></i></div>
+    <a class="brand" href="#intro" aria-label="Mingyang Chang">mingyang<span>.</span></a>
+    <nav class="topnav" aria-label="Chapters">
+      <a href="#intro" data-nav="intro" data-text="about">About</a>
+      <a href="#journey" data-nav="journey" data-text="journey">Journey</a>
+      <a href="#work" data-nav="work" data-text="work">Work</a>
+      <a href="#life" data-nav="life" data-text="life">Life</a>
+    </nav>
+    <button class="language" type="button" aria-label="切换至中文">中文</button>
   </header>
   <main id="main">
-    <section class="hero shell" id="home" aria-labelledby="name">
-      <div class="hero-copy">
-        <p class="eyebrow"><span class="en" lang="en">Hong Kong · Shenzhen</span><span class="zh" lang="zh-CN">香港 · 深圳</span></p>
-        <h1 id="name"><span class="en" lang="en">Mingyang<br class="name-break"> Chang</span><span class="zh" lang="zh-CN">常明阳</span></h1>
-        <p class="hero-line"><span class="en" lang="en">From user research to commercial validation.</span><span class="zh" lang="zh-CN">从用户洞察到商业化验证。</span></p>
-        <div class="hero-intro">
-          <p><span class="en" lang="en">My background is in biomedical engineering and automation. I turn user research into product requirements, test ideas through prototypes, and use cost and operating data to assess how a product could be deployed.</span><span class="zh" lang="zh-CN">我有生物医学工程与自动化背景，关注 AI 与硬件产品的早期验证。我通过用户研究定义产品需求，用原型验证功能，再用成本和运营数据评估部署可行性。</span></p>
-          <p><span class="en" lang="en">At Meituan, I modeled unit economics and simulated dispatch to evaluate drone delivery scenarios in the Middle East. At BrainCo, I used a large language model to turn feedback from more than 50 users and customers into requirements for cognitive training games.</span><span class="zh" lang="zh-CN">在美团，我用单均经济模型和调度仿真评估中东无人机配送的部署方案。在强脑科技，我用大语言模型梳理 50 多位用户与客户的反馈，将反复出现的问题转化为认知训练游戏的功能需求。</span></p>
+    <section id="intro" class="intro chapter" aria-labelledby="name">
+      <div class="intro-inner">
+        <div class="intro-copy">
+          <p class="eyebrow" data-text="region">Hong Kong / Shenzhen</p>
+          <h1 id="name" data-text="name">Mingyang Chang</h1>
+          <p class="intro-line" data-text="position">Product Manager</p>
+          <div class="contacts">
+            <a href="mailto:1155263530@link.cuhk.edu.hk" data-text="email">Email ↗</a>
+            <a href="https://www.linkedin.com/in/chang0316/" target="_blank" rel="noopener">LinkedIn ↗</a>
+          </div>
+          <dl class="profile">
+            <div><dt data-text="education">Education</dt><dd class="schools"></dd></div>
+            <div><dt class="career-heading" data-text="experience">Experience</dt><dd class="career"><div class="career-links"></div></dd></div>
+            <div><dt data-text="focus">Focus</dt><dd data-text="focusLine">AI-Native &amp; AI-Empowered · User Insights · Commercial-Minded</dd></div>
+          </dl>
         </div>
-        <div class="hero-links"><a class="button primary" href="#work"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 4v12m-5-5 5 5 5-5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="en" lang="en">Work</span><span class="zh" lang="zh-CN">经历</span></a><a class="button secondary" href="mailto:1155263530@link.cuhk.edu.hk"><span class="en" lang="en">Email me</span><span class="zh" lang="zh-CN">发邮件</span><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 15 15 5M6 5h9v9" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="button secondary" href="https://www.linkedin.com/in/chang0316/" target="_blank" rel="noopener noreferrer"><span class="en" lang="en">LinkedIn</span><span class="zh" lang="zh-CN">领英</span><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 15 15 5M6 5h9v9" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+        <figure class="portrait">
+          <img src="headshot-cutout.png" alt="Portrait of Mingyang Chang" width="1227" height="1282">
+        </figure>
       </div>
-      <figure class="cover">
-        <div class="cover-frame"><img src="assets/cover-towers.jpg" width="1279" height="1706" alt="Mingyang facing the illuminated Petronas Twin Towers at night" data-alt-en="Mingyang facing the illuminated Petronas Twin Towers at night" data-alt-zh="夜色中，常明阳面向点亮的吉隆坡双子塔" fetchpriority="high"></div>
-        <figcaption><span><span class="en" lang="en">Petronas Twin Towers, Kuala Lumpur</span><span class="zh" lang="zh-CN">吉隆坡双子塔</span></span><span aria-hidden="true">Fig. 00</span></figcaption>
-      </figure>
+      <a class="scroll-link" href="#journey"><span data-text="scroll">Explore the journey</span><i aria-hidden="true"></i></a>
     </section>
-    <section class="education section shell" id="education" aria-label="Education" data-label-en="Education" data-label-zh="教育">
-      <div class="section-head"><span class="section-index" aria-hidden="true">01</span><h2><span class="en" lang="en">Education</span><span class="zh" lang="zh-CN">教育</span></h2></div>
-      <div class="education-list">
-        <div class="school">
-          <p class="school-date"><span class="en" lang="en">2026 – Present</span><span class="zh" lang="zh-CN">2026 至今</span></p>
-          <div class="school-main"><img class="school-logo school-logo-cuhk" src="assets/cuhk-logo.jpg" alt="" width="72" height="56" loading="lazy" decoding="async"><div><h3><span class="en" lang="en">The Chinese University of Hong Kong</span><span class="zh" lang="zh-CN">香港中文大学</span></h3><p><span class="en" lang="en">MSc in Mechanical and Automation Engineering</span><span class="zh" lang="zh-CN">机械与自动化工程理学硕士</span></p></div></div>
+
+    <section id="journey" class="journey chapter" aria-label="Greater Bay Area journey">
+      <div class="map-screen">
+        <canvas id="bay-map" aria-hidden="true"></canvas>
+        <div class="map-labels" aria-hidden="true"></div>
+        <div class="map-points" role="group" aria-label="Experience locations"></div>
+        <div class="journey-caption">
+          <p class="eyebrow" data-text="journey">Journey</p>
+          <h2 data-text="mapTitle">Greater Bay Area</h2>
         </div>
-        <div class="school">
-          <p class="school-date"><span class="en" lang="en">2022 – 2026</span><span class="zh" lang="zh-CN">2022–2026</span></p>
-          <div class="school-main"><img class="school-logo" src="assets/polyu-logo.png" alt="" width="72" height="56" loading="lazy" decoding="async"><div><h3><span class="en" lang="en">The Hong Kong Polytechnic University</span><span class="zh" lang="zh-CN">香港理工大学</span></h3><p><span class="en" lang="en">BSc (Hons) in Biomedical Engineering · Minor in Innovation and Entrepreneurship<br>GPA 3.5/4.3 · Top 5% in Major</span><span class="zh" lang="zh-CN">生物医学工程荣誉理学士 · 辅修创新与创业<br>GPA 3.5/4.3 · 专业排名前 5%</span></p></div></div>
+        <article class="stop" aria-labelledby="stop-title">
+          <div class="stop-media"></div>
+          <div class="stop-copy"></div>
+        </article>
+        <div class="map-controls">
+          <div class="map-control-head">
+            <p class="map-year" aria-hidden="true"><span class="year"></span><span class="step-city"></span></p>
+            <div class="step-buttons"><button type="button" data-step="-1" aria-label="Previous stop">↑</button><button type="button" data-step="1" aria-label="Next stop">↓</button></div>
+          </div>
+          <nav class="map-ticks" aria-label="Journey timeline"></nav>
+          <div class="map-meta"><span class="map-sources"><a href="https://www.naturalearthdata.com/downloads/10m-physical-vectors/" target="_blank" rel="noopener">Natural Earth</a><a href="https://data.gov.hk/en-data/dataset/hk-had-json1-hong-kong-administrative-boundaries" target="_blank" rel="noopener" data-text="hkSource">© Hong Kong SAR Government · HAD · DATA.GOV.HK</a><a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener" data-text="szSource">© OpenStreetMap contributors</a><a href="https://www.openmaptiles.org/" target="_blank" rel="noopener">© OpenMapTiles</a></span><span data-text="scrollOrTap">Scroll or select a stop</span></div>
         </div>
       </div>
+      <div class="track" aria-hidden="true"></div>
     </section>
-    <section class="work section shell" id="work" aria-label="Selected work" data-label-en="Selected work" data-label-zh="精选经历与项目">
-      <div class="section-head"><span class="section-index" aria-hidden="true">02</span><h2><span class="en" lang="en">Selected work</span><span class="zh" lang="zh-CN">精选经历</span></h2></div>
-      <p class="section-intro"><span class="en" lang="en">Work spanning drone delivery economics, adaptive cognitive training, retail AI and community screening.</span><span class="zh" lang="zh-CN">从无人机配送的商业测算，到认知训练、零售 AI 与社区筛查的产品验证。</span></p>
-      <h3 class="group-title"><span class="en" lang="en">Internships</span><span class="zh" lang="zh-CN">实习</span></h3>
-      <article class="case-row" id="meituan">
-  <div class="case-copy">
-    <div class="case-kicker"><span class="serial">01</span><span><span class="en" lang="en">Apr – Aug 2026</span><span class="zh" lang="zh-CN">2026.04–08</span></span></div>
-    <div class="company"><img class="company-logo" src="assets/meituan-logo.png" alt="" width="108" height="36" loading="lazy"><span><span class="en" lang="en">Meituan Drone</span><span class="zh" lang="zh-CN">美团无人机</span></span></div>
-    <p class="role"><span class="en" lang="en">AI Product Management Intern · International Commercialization</span><span class="zh" lang="zh-CN">AI 产品经理实习生 · 海外商业化</span></p>
-    <h3><span class="en" lang="en">Drone Delivery Economics in the Middle East</span><span class="zh" lang="zh-CN">中东无人机配送的商业<span class="keep-together">可行性评估</span></span></h3>
-    <p><span class="en" lang="en">I assessed the commercial feasibility of drone delivery in the Middle East by connecting station operations and cost per delivery to deployment decisions.</span><span class="zh" lang="zh-CN">我负责评估中东无人机配送的商业可行性，把自动化机场的运营参数和单均成本纳入部署决策。</span></p>
-    <ul class="contributions"><li><span class="en" lang="en">Built a unit economics model and led development of a dispatch simulator to assess how station capacity and the share of orders served by drone affected cost per delivery.</span><span class="zh" lang="zh-CN">搭建单均经济模型，主导开发调度仿真工具，测算不同订单渗透率和站点容量下的单均配送成本。</span></li><li><span class="en" lang="en">Quantified 13 cost-saving opportunities and delivered the simulator, cost model and deployment playbook to the international team for planning in Dubai and Riyadh. The plan targeted a cost reduction of about 15%.</span><span class="zh" lang="zh-CN">量化 13 个降本机会，向海外团队交付仿真工具、成本模型与部署手册，支持迪拜和利雅得的部署规划。方案降本目标约为 15%。</span></li></ul>
-    <p class="tags"><span class="en" lang="en">Unit economics · Simulation · Deployment</span><span class="zh" lang="zh-CN">单均经济 · 调度仿真 · 部署规划</span></p>
-  </div><figure class="case-figure meituan-figure"><div class="media-frame"><img src="assets/meituan-drones.jpg" width="1080" height="1920" alt="Yellow Meituan delivery drones lined up on a rooftop" data-alt-en="Yellow Meituan delivery drones lined up on a rooftop" data-alt-zh="楼顶起降区排列着多台黄色美团配送无人机" loading="lazy" decoding="async"></div><figcaption><span class="en" lang="en">Drone fleet on a rooftop test site</span><span class="zh" lang="zh-CN">楼顶起降区的无人机编队</span></figcaption></figure>
-</article>
-<article class="case-row" id="brainco">
-  <div class="case-copy">
-    <div class="case-kicker"><span class="serial">02</span><span><span class="en" lang="en">Jan – Apr 2026</span><span class="zh" lang="zh-CN">2026.01–04</span></span></div>
-    <div class="company"><img class="company-logo" src="assets/brainco-logo.webp" alt="" width="108" height="36" loading="lazy"><span><span class="en" lang="en">BrainCo</span><span class="zh" lang="zh-CN">强脑科技</span></span></div>
-    <p class="role"><span class="en" lang="en">Product Manager Intern · Cognitive Training</span><span class="zh" lang="zh-CN">产品经理实习生 · 认知训练</span></p>
-    <h3><span class="en" lang="en">Defining an Adaptive Cognitive Training MVP</span><span class="zh" lang="zh-CN">定义自适应认知训练 MVP</span></h3>
-    <p><span class="en" lang="en">I defined MVP features for a cognitive training product, focusing on repetitive exercises and reliance on subjective assessments.</span><span class="zh" lang="zh-CN">我负责认知训练产品的 MVP 功能定义，重点解决训练内容重复、评估依赖主观判断的问题。</span></p>
-    <ul class="contributions"><li><span class="en" lang="en">Interviewed more than 50 users and customers, used an LLM to group feedback by theme, and prioritized the resulting requirements.</span><span class="zh" lang="zh-CN">回访 50 多位用户与客户，用大语言模型对反馈进行主题聚类，据此确定需求优先级。</span></li><li><span class="en" lang="en">Delivered product requirements for three games and designed adaptive difficulty and neurofeedback interactions. User satisfaction rose by 20%.</span><span class="zh" lang="zh-CN">交付三款训练游戏的产品需求文档，设计自适应难度与神经反馈交互。用户满意度提升 20%。</span></li></ul>
-    <p class="tags"><span class="en" lang="en">User research · Product requirements · Adaptive training</span><span class="zh" lang="zh-CN">用户研究 · 产品需求 · 自适应训练</span></p>
-  </div><figure class="case-figure brainco-figure"><div class="media-frame"><img src="assets/brainco-product.png" width="1265" height="844" alt="BrainCo cognitive training headband and product packaging" data-alt-en="BrainCo cognitive training headband and product packaging" data-alt-zh="强脑科技认知训练头环及产品包装" loading="lazy" decoding="async"></div><figcaption><span class="en" lang="en">The cognitive training product</span><span class="zh" lang="zh-CN">我参与设计的认知训练产品</span></figcaption></figure>
-</article>
-<article class="case-row" id="tech-hill">
-  <div class="case-copy">
-    <div class="case-kicker"><span class="serial">03</span><span><span class="en" lang="en">Oct 2024 – Apr 2025</span><span class="zh" lang="zh-CN">2024.10–2025.04</span></span></div>
-    <div class="company"><img class="company-logo" src="assets/tech-hill-logo.png" alt="" width="108" height="36" loading="lazy"><span><span class="en" lang="en">Tech Hill</span><span class="zh" lang="zh-CN">科技山</span></span></div>
-    <p class="role"><span class="en" lang="en">Product Engineering Intern · Hong Kong</span><span class="zh" lang="zh-CN">产品工程师实习生 · 香港</span></p>
-    <h3><span class="en" lang="en">Sensor Integration for an Autonomous Illuminance Cart</span><span class="zh" lang="zh-CN">无人照度检测车的传感器集成与测量界面</span></h3>
-    <p><span class="en" lang="en">The cart needed to capture readings from multiple sensors and display measurement results in one interface.</span><span class="zh" lang="zh-CN">无人照度检测车需要接入多路传感器，并在同一界面展示测量结果。</span></p>
-    <ul class="contributions"><li><span class="en" lang="en">Led development of a Python module for multi-sensor data ingestion and integrated YOLO-based object detection, reaching 95% recognition accuracy.</span><span class="zh" lang="zh-CN">主导开发 Python 通信模块，接入多路传感器数据并集成 YOLO 目标检测，识别准确率达 95%。</span></li><li><span class="en" lang="en">Designed the measurement interface and workflow from data capture to visualization. For a portable blood analyzer, I created mechanical models in SolidWorks and interaction prototypes in Figma.</span><span class="zh" lang="zh-CN">完成从数据采集到结果展示的测量流程与界面设计，并用 SolidWorks 和 Figma 为便携式血液分析仪制作结构模型与交互原型。</span></li></ul>
-    <p class="tags"><span class="en" lang="en">Python · Computer vision · Hardware UX</span><span class="zh" lang="zh-CN">Python · 计算机视觉 · 硬件交互</span></p>
-  </div><figure class="case-figure tech-hill-figure"><div class="media-frame"><img src="assets/tech-hill-console.jpg" width="1918" height="1080" alt="Illuminance measurement software showing upper and lower sensor arrays" data-alt-en="Illuminance measurement software showing upper and lower sensor arrays" data-alt-zh="照度检测软件展示上下两层传感器读数" loading="lazy" decoding="async"></div><figcaption><span class="en" lang="en">Illuminance measurement interface</span><span class="zh" lang="zh-CN">照度检测系统界面</span></figcaption></figure>
-</article>
-      <h3 class="group-title projects-title"><span class="en" lang="en">Projects</span><span class="zh" lang="zh-CN">项目</span></h3>
-      <div class="projects-grid"><article class="project" id="g2000">
-    <div class="case-kicker"><span class="serial">04</span><span><span class="en" lang="en">G2000</span><span class="zh" lang="zh-CN">G2000</span></span><span class="case-date"><span class="en" lang="en">Jan – Jun 2026</span><span class="zh" lang="zh-CN">2026.01–06</span></span></div>
-    <p class="role"><span class="en" lang="en">Project Lead · AI Sales Assistant</span><span class="zh" lang="zh-CN">项目负责人 · AI 销售助手</span></p>
-    <h3><span class="en" lang="en">A Retail AI Agent for Store Associates and Shoppers</span><span class="zh" lang="zh-CN">面向导购与顾客的零售 AI Agent</span></h3>
-    <figure class="case-figure g2000-figure"><div class="media-frame"><img src="assets/g2000-store.jpg" width="1279" height="1706" alt="G2000 store entrance and sales floor" data-alt-en="G2000 store entrance and sales floor" data-alt-zh="G2000 门店入口与陈列区域" loading="lazy" decoding="async"></div><figcaption><span class="en" lang="en">The retail setting behind the prototype</span><span class="zh" lang="zh-CN">原型所面向的门店场景</span></figcaption></figure>
-    <div class="project-summary">
-      <p><span class="en" lang="en">To address lengthy staff onboarding and fragmented inventory information, I led a team that mapped store workflows and delivered an eight-feature prototype and demo for an associate interface and a customer-facing kiosk.</span><span class="zh" lang="zh-CN">针对导购培训周期长、库存信息分散的问题，我带队梳理门店销售流程，交付覆盖店员端和顾客自助终端的八项功能原型与演示。</span></p>
-      <p><span class="en" lang="en">We separated intent classification from recommendation logic and used retrieval-augmented generation (RAG) to ground recommendations. The prototype reduced model call costs by 30%. The estimated reduction in store operating costs was 20%.</span><span class="zh" lang="zh-CN">我们分离意图识别与推荐逻辑，并用检索增强生成（RAG）为推荐提供依据。原型的模型调用成本降低 30%，门店运营成本预计可降低 20%。</span></p>
-      <p class="tags"><span class="en" lang="en">RAG · Retail workflows · Figma</span><span class="zh" lang="zh-CN">检索增强生成 · 门店流程 · Figma</span></p>
-    </div>
-  </article>
-<article class="project" id="parkincare">
-    <div class="case-kicker"><span class="serial">05</span><span><span class="en" lang="en">ParkinCare</span><span class="zh" lang="zh-CN">ParkinCare</span></span><span class="case-date"><span class="en" lang="en">Sep 2024 – Jun 2025</span><span class="zh" lang="zh-CN">2024.09–2025.06</span></span></div>
-    <p class="role"><span class="en" lang="en">Project Lead · Screening Prototype</span><span class="zh" lang="zh-CN">项目负责人 · 筛查原型</span></p>
-    <h3><span class="en" lang="en">A Research Prototype for Community Parkinson’s Screening</span><span class="zh" lang="zh-CN">社区帕金森早期筛查研究原型</span></h3>
-    <figure class="case-figure parkincare-figure"><div class="media-frame"><img src="assets/parkincare-console.png" width="957" height="486" alt="ParkinCare console, grip sensor, card reader and RFID cards" data-alt-en="ParkinCare console, grip sensor, card reader and RFID cards" data-alt-zh="ParkinCare 交互终端、握力传感器、读卡器和 RFID 卡" loading="lazy" decoding="async"></div><figcaption><span class="en" lang="en">Research prototype and peripherals</span><span class="zh" lang="zh-CN">研究原型与配套硬件</span></figcaption></figure>
-    <div class="project-summary">
-      <p><span class="en" lang="en">I led product design for a non-invasive research prototype exploring how to screen for early signs of Parkinson’s disease in community settings. The terminal combines games designed for older adults, grip sensing and a ResNet-50 computer vision model.</span><span class="zh" lang="zh-CN">我主导一款面向社区场景的非侵入式研究原型设计，将适老化游戏、握力传感与 ResNet-50 计算机视觉模型集成到同一终端。</span></p>
-      <p><span class="en" lang="en">During a residential care pilot, I linked RFID identification to session records to build a traceable digital record for each participant.</span><span class="zh" lang="zh-CN">在养老机构试点中，我将 RFID 身份识别与每次交互记录关联，为参与者建立可追踪的数字档案。</span></p>
-      <p class="tags"><span class="en" lang="en">Computer vision · RFID · Prototyping</span><span class="zh" lang="zh-CN">计算机视觉 · RFID · 原型开发</span></p>
-    </div>
-  </article></div>
+
+    <section id="work" class="chapter work" aria-labelledby="work-title">
+      <div class="chapter-heading"><p class="eyebrow" data-text="work">Work</p><h2 id="work-title" data-text="workTitle">Selected work</h2></div>
+      <div class="work-scenes"></div>
+      <div class="chapter-heading education-heading"><h2 data-text="education">Education</h2></div>
+      <div class="education-scenes"></div>
     </section>
-    <section class="life section shell" id="life" aria-label="Life outside work" data-label-en="Life outside work" data-label-zh="工作之外">
-      <div class="section-head"><span class="section-index" aria-hidden="true">03</span><h2><span class="en" lang="en">Outside work</span><span class="zh" lang="zh-CN">工作之外</span></h2></div>
-      <div class="life-copy"><p class="life-lead"><span class="en" lang="en">Think in years. Make time to wander.</span><span class="zh" lang="zh-CN">把时间拉长，也给自己留一点漫游的空间。</span></p>
-      <p><span class="en" lang="en">I travel for the unfamiliar streets, bookshops and meals along the way. I like reading about how companies are run and how economies work. I’m also curious about the less answerable stuff, from the unexplained to life beyond Earth. I value the freedom to follow a question wherever it leads.</span><span class="zh" lang="zh-CN">我喜欢旅行里的陌生街巷、旧书店和路上的好味道。阅读时常从企业管理和经济学出发，也好奇那些暂时没有答案的事，比如神秘现象和地外生命。我珍惜追着一个问题走下去的自由。</span></p></div>
-      <div class="life-gallery">
-        <figure class="life-item"><div class="life-image"><img src="assets/life-bookshop.jpg" width="1279" height="1706" alt="Mingyang browsing shelves in a second-hand bookshop" data-alt-en="Mingyang browsing shelves in a second-hand bookshop" data-alt-zh="常明阳在旧书店翻看书籍" loading="lazy" decoding="async"></div><figcaption><span class="en" lang="en">A bookshop stop</span><span class="zh" lang="zh-CN">在旧书店停一停</span></figcaption></figure>
-<figure class="life-item"><div class="life-image"><img src="assets/life-sunset.jpg" width="1279" height="1706" alt="Seabirds over the sea at sunset" data-alt-en="Seabirds over the sea at sunset" data-alt-zh="日落时掠过海面的海鸟" loading="lazy" decoding="async"></div><figcaption><span class="en" lang="en">The sea at sundown</span><span class="zh" lang="zh-CN">日落时分的海</span></figcaption></figure>
-<figure class="life-item"><div class="life-image"><img src="assets/life-train.jpg" width="1279" height="1706" alt="City skyline and tracks seen from a station at dusk" data-alt-en="City skyline and tracks seen from a station at dusk" data-alt-zh="黄昏时从站台看向轨道与城市天际线" loading="lazy" decoding="async"></div><figcaption><span class="en" lang="en">A city from the platform</span><span class="zh" lang="zh-CN">站台上的城市一角</span></figcaption></figure>
-<figure class="life-item"><div class="life-image"><img src="assets/life-mural.jpg" width="1279" height="1706" alt="A building mural beneath a clear blue sky" data-alt-en="A building mural beneath a clear blue sky" data-alt-zh="晴空下绘有壁画的建筑" loading="lazy" decoding="async"></div><figcaption><span class="en" lang="en">A mural found on a walk</span><span class="zh" lang="zh-CN">散步遇见的壁画</span></figcaption></figure>
-<figure class="life-item"><div class="life-image"><img src="assets/life-table.jpg" width="1280" height="960" alt="Sliced steak and tomatoes served in a wooden box" data-alt-en="Sliced steak and tomatoes served in a wooden box" data-alt-zh="木盒里盛着切片牛排和番茄" loading="lazy" decoding="async"></div><figcaption><span class="en" lang="en">Something worth sharing</span><span class="zh" lang="zh-CN">值得分享的一餐</span></figcaption></figure>
-<figure class="life-item"><div class="life-image"><img src="assets/life-seaside.jpg" width="1280" height="1706" alt="Mingyang sitting on a beach in late afternoon light" data-alt-en="Mingyang sitting on a beach in late afternoon light" data-alt-zh="常明阳坐在午后光线里的海滩上" loading="lazy" decoding="async"></div><figcaption><span class="en" lang="en">Time by the water</span><span class="zh" lang="zh-CN">海边慢一点</span></figcaption></figure>
-      </div>
+    <section id="life" class="chapter life" aria-labelledby="life-title">
+      <div class="chapter-heading"><p class="eyebrow" data-text="life">Life</p><h2 id="life-title" data-text="lifeTitle">Outside work</h2><p data-text="lifeIntro">Bookshops, unfamiliar streets and good meals along the way.</p></div>
+      <div class="gallery"></div>
     </section>
-    <footer class="contact" id="contact">
-      <div class="shell contact-inner">
-        <div class="section-head"><span class="section-index" aria-hidden="true">04</span><h2><span class="en" lang="en">Let’s talk</span><span class="zh" lang="zh-CN">聊聊吧</span></h2></div>
-        <p><span class="en" lang="en">Have a question about my work or an idea we could build together? I’d like to hear from you.</span><span class="zh" lang="zh-CN">如果你想交流产品、AI 应用或商业化，也欢迎和我聊聊。</span></p>
-        <div class="footer-links"><a class="button primary" href="mailto:1155263530@link.cuhk.edu.hk"><span class="en" lang="en">Email me</span><span class="zh" lang="zh-CN">发邮件</span><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 15 15 5M6 5h9v9" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="button secondary" href="https://www.linkedin.com/in/chang0316/" target="_blank" rel="noopener noreferrer"><span class="en" lang="en">LinkedIn</span><span class="zh" lang="zh-CN">领英</span><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 15 15 5M6 5h9v9" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
-        <div class="footer-line"><span>© 2026 <span class="en" lang="en">Mingyang Chang</span><span class="zh" lang="zh-CN">常明阳</span></span><a href="#home"><span class="en" lang="en">Back to top</span><span class="zh" lang="zh-CN">回到顶部</span> ↑</a></div>
-      </div>
-    </footer>
   </main>
+  <footer><span>© 2026 Mingyang Chang</span><a href="#intro" data-text="top">Back to top ↑</a></footer>
 </body>
 </html>
